@@ -1,0 +1,16 @@
+<hello name="{{ name }}"></hello>
+<label>Percent : </label>
+<input type="text" [(ngModel)]="percentValue" mask="separator.2" suffix=" %" >
+<p *ngIf="percentValue">Value: {{ percentValue }}</p>
+
+<label>Currency : </label>
+<input type="text" [(ngModel)]="currencyValue" mask="separator.2" prefix="R " thousandSeparator=" " >
+<p *ngIf="currencyValue">Value: {{ currencyValue }}</p>
+
+<label>Currency (No Decimals) : </label>
+<input type="text" [(ngModel)]="currencyNoDecimalsValue" mask="separator.0" prefix="R " thousandSeparator=" " >
+<p *ngIf="currencyNoDecimalsValue">Value: {{ currencyNoDecimalsValue }}</p>
+
+<label>Allow Negative : </label>
+<input type="text" [(ngModel)]="customMask" mask="separator.2" [allowNegativeNumbers]="true" thousandSeparator=" " >
+<p *ngIf="customMask">Value: {{ customMask }}</p>
